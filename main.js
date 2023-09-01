@@ -34,7 +34,8 @@ let acceptData = () => {
 };
 
 let createPost = () => {
-  posts.innerHTML += `<div>
+  posts.innerHTML += `
+  <div>
     <p>${data.text}</p>
     <span class="options">
       <i onClick="editPost(this)" class="fas fa-edit"></i>
@@ -51,6 +52,8 @@ let deletePost = (e) => {
 let editPost = (e) => {
   input.value = e.parentElement.previousElementSibling.innerHTML;
   e.parentElement.parentElement.remove();
+  let modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  modal.show();
   savePosts(); // Save updated posts to local storage
 };
 
@@ -65,3 +68,5 @@ let loadPosts = () => {
     posts.innerHTML = localStorage.getItem("posts");
   }
 };
+
+// localStorage.clear()

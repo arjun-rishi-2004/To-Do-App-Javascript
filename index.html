@@ -4,39 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social media app</title>
+    <title>TODO appp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
 <h1>
-    Social Media App
+    TODO App
 </h1>
-<div class="container">
-    <div class="left">
-<form action="" id="form">
-<label for="post">Write your post here</label>
-<br><br>
-<textarea name="post" id="input" cols="30" rows="10"></textarea>
+<br>
+<br>
+<br>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Add a task
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tasks</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="left">
+        <form action="" id="form">
+        <label for="post">Write your task here</label>
+        <br><br>
+        <textarea name="post" id="input" cols="30" rows="10"></textarea>
+        
+        <br><br>
+        <div id="msg"></div>
+        <button type="submit" class="btn btn-info" data-bs-dismiss="modal">ADD</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-<br><br>
-<div id="msg"></div>
-<button type="submit" >Post</button> 
-</form>
-</div>
 
-    <div class="right">
-        <div class="right">
-            <h3>Your posts here</h3>
-            <div id="posts"></div>
+        </form>
+        </div>
+        
+            </div>      
+        
+        </div>
+      <div class="modal-footer">
+        <!-- <button type="submit"  class="btn btn-info">Post</button>  -->
 
-            </div>
-          </div>
-
+      </div>
     </div>
+  </div>
 </div>
+<div class="right">
+    <div class="right">
+        <br><br>
+        <h3>Your task here</h3>
+        <br><br>
 
+        <div id="posts"></div>
+
+        </div>
+      </div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
 </html>

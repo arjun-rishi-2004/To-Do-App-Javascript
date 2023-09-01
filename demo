@@ -1,0 +1,7 @@
+<div class="card">
+  <div class="card-body">
+    <p class="card-text">${data.text}</p>
+    <i onClick="editPost(this)" class="fas fa-edit"></i>
+      <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
+  </div>
+</div>
